@@ -1,0 +1,16 @@
+body {
+  background-color:rgba(216, 214, 214, 0.719);
+
+}
+
+#contain{
+  width: 600px;
+  margin: 10% auto;
+  background-color:gold;
+  border-radius: 8px;
+  text-align: center;
+  
+}
+#caja{
+  margin-top: 5%;
+}

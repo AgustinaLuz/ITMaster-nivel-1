@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+    <style>
+        form{width: 50%;
+        margin: 25px auto;
+        padding: 25px;
+        box-sizing: border-box;
+        border: 2px solid black;}
+
+        form label{
+            text-align: center;
+            display: block;}
+        
+        form input[type="number"]{
+            display: block;
+            margin: 20px auto;
+            width: 30%;
+        }
+        form input[type="button"]{
+            display: inline;
+        }
+        #A{margin-left: 43%;}
+
+        #texto{
+            text-align: center;
+            font-size: 25px;}
+        
+        #lista{
+            width: 40%;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Crear un formulario con un input type number y un botón para agregar y uno deshacer (quita el último elemento del array).
+El usuario puede cargar hasta 4 números positivos que se van agregando en un array.
+Mostrar mensaje de éxito en verde en caso de agregado correcto y mostrar en una lista lo que contiene el array.
+Si el usuario toca el botón deshacer: mostrar un mensaje con el número que se quitó, y refrescar la lista en pantalla.
+Mostrar mensaje en rojo explicando el error en los siguientes casos: si el usuario quiere agregar un numero no positivo, si se superó el límite máximo del array, si el array queda vacío y se toca de nuevo deshacer .
+ -->
+<form>
+    <label>Ingrese un numero: </label>
+    <input type="number" placeholder="numero" id="num">
+    <input type="button" onclick="agregar()" value="Agregar" id="A">
+    <input type="button" onclick="deshacer()" value="Deshacer">
+</form>
+<p id="texto"></p> 
+<ul id="lista"></ul>
+
+<script>
+    var array = [];
+    function agregar(){
+        var n = document.getElementById("num").value
+        document.getElementById("num").value= ""
+       if(array.length<=3){
+          if(n > 0){
+              array.push(n)
+              document.getElementById("texto").innerHTML= " Agregado!"
+              document.getElementById("texto").style.color="darkgreen"
+          }
+          else{
+            document.getElementById("texto").innerHTML= " Numero incorrecto! Debe ser positivo"
+            document.getElementById("texto").style.color="red"
+          }
+        }
+        else{
+            document.getElementById("texto").innerHTML = "No se pueden ingresar más números, llegó al límite"
+            document.getElementById("texto").style.color="red"
+        }
+        
+        renderlista()        
+    }
+
+    function deshacer(){
+        if(array.length == 0){
+         document.getElementById("texto").innerHTML= "No hay números para eliminar!"
+       }
+       else{
+        var quitado = array.pop()
+        document.getElementById("texto").innerHTML= "Número eliminado  :"+ quitado
+        document.getElementById("texto").style.color="red"           
+       }         
+       renderlista()
+    }
+
+    function renderlista(){
+        var acumula = ""
+        for(i in array){
+            acumula += "<li>" + array[i]+ "</li>"
+        }
+        document.getElementById("lista").innerHTML = acumula         
+
+    }
+</script>
+</body>
+</html>

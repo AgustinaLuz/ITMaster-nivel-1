@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 90px;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 20%;
+}
+
+nav {
+    width: 20%;
+    float: left;
+    margin-top: 50px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    float: left;
+    width: 80%;
+}
+
+main h1 {
+    width: 100%;
+}
+
+table {
+    width: 80%;
+}
+
+.table {
+    margin-top: 10px;
+    width: 80%;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}

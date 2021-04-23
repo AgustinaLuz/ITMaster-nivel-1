@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <figure>
+        <img  id="myImg" src="https://via.placeholder.com/1x1" alt="Cargando...">
+    </figure>
+    <figure>
+        <img  id="myImg2" src="https://via.placeholder.com/1x1" alt="Cargando...">
+    </figure>
+</body>
+<script>
+    var imagenes = ["https://via.placeholder.com/150x200", "https://via.placeholder.com/150x150", "https://via.placeholder.com/220x150", "https://via.placeholder.com/300x150"  ];
+   
+    var i = Math.floor(Math.random()*imagenes.length);
+    var j = Math.floor(Math.random()*imagenes.length);
+    
+    
+    while (i == j) {
+        var i = Math.floor(Math.random()*imagenes.length);
+        var j = Math.floor(Math.random()*imagenes.length);
+        
+    }
+
+    document.getElementById("myImg").setAttribute("src", imagenes[i]);
+    document.getElementById("myImg2").setAttribute("src", imagenes[j]);
+
+</script>
+</html>

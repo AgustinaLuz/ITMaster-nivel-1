@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="monto">Monto:</label>
+        <input type="number" name="" id="monto" onkeyup="calcular()">
+        <label for="moneda">Moneda:</label>
+        <select name="" id="moneda" onchange="calcular()">
+            <option value="pesos">Pesos</option>
+            <option value="dolares">Dolares</option>
+        </select>
+        <input type="button" onclick="calcular()" value="Calcular">
+        <!-- <input type="button" onclick="calcular()" value="Calcular"> -->
+        <p id="resultado"></p>
+    </form>
+    <script>
+        function calcular(){
+            var monto = document.getElementById("monto").value;
+            var opcion = document.getElementById("moneda").value;
+            
+            if (opcion == "dolares") {
+                console.log(monto * 100);
+                document.getElementById("resultado").innerHTML = (monto * 100);
+            }
+            else {
+                console.log(monto * 0.01 );
+                document.getElementById("resultado").innerHTML = (monto * 0.01);
+            }
+        }
+    </script>
+</body>
+</html>

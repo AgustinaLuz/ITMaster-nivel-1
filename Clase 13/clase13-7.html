@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform" action="">
+        <label for="nombre">Ingrese nombres que empiezan con la letra a/A:</label>
+        <input type="text" name="" id="nombre">
+        <input type="button" onclick="agregar()" value="Agregar" >
+        <ul id="list">
+            <p id="resultado"></p>
+        </ul>
+    </form>
+
+    <script>
+        var listaNombres = [];
+        function agregar(){
+            var nombre = document.getElementById("nombre").value;
+            
+            if(nombre[0] == "A" || nombre[0] == "a"){
+                console.log(nombre);
+                listaNombres.push(nombre);
+                document.getElementById("myform").reset();
+
+            }
+            document.getElementById("resultado").innerHTML = listaNombres;
+            
+            
+        }
+    </script>
+
+</body>
+</html>

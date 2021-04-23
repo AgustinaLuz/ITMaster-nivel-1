@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+        form{
+            width: 50%;
+            border: 2px solid black;
+            margin: 0 auto;
+            }
+        h1{text-align: center;
+        }
+        input[type="button"]{
+            display: block;
+            margin: 5px auto;
+        }
+        #n1,#n2{text-align: center;}
+        #n3,#n4{ 
+            text-align: center;
+            font-weight:bold;}
+    </style>
+</head>
+<body>
+<!-- Hacer un juego de dados.
+Existe un botón tirar.
+Tenemos dos dados
+Mostrar el resultado  de cada dado en pantalla.
+Indicar cuál ganó.
+ -->
+ <h1>Juego de Dados!</h1>
+<form>
+    <input type="button" onclick="tirar()" value="Tirar">
+    <p id="n1"></p>
+    <p id="n2"></p>
+    <p id="n3"></p>
+    <p id="n4"></p>
+</form>
+<script>
+    function tirar() {
+        var random1 = Math.random()
+        var random2 = Math.random()
+        var jugador1 = Math.ceil(random1 *6)
+        var jugador2 = Math.ceil(random2 *6)
+        document.getElementById("n1").innerHTML = `Resultado jugador 1= ${(jugador1)}`
+        document.getElementById("n2").innerHTML = `Resultado jugador 2= ${(jugador2)}`
+
+        if (jugador1 > jugador2){
+            document.getElementById("n3").innerHTML = `jugador 1 gana`
+            document.getElementById("n4").innerHTML = `jugador 2 pierde`
+            document.getElementById("n3").style.color = "green"
+            document.getElementById("n4").style.color = "red"
+    }
+       else if (jugador1 < jugador2){
+            document.getElementById("n3").innerHTML = `jugador 2 gana`
+            document.getElementById("n4").innerHTML = `jugador 1 pierde`
+            document.getElementById("n3").style.color = "green"
+            document.getElementById("n4").style.color = "red"
+    }
+       else {
+            document.getElementById("n3").innerHTML = `jugador 1 empate`
+            document.getElementById("n4").innerHTML = `jugador 2 empate`
+            document.getElementById("n3").style.color = "gold"
+            document.getElementById("n4").style.color = "gold"
+       }
+    }
+</script>
+</body>
+</html>

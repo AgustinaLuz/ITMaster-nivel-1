@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="year">Ingrese el año:</label>
+        <input type="number" name="" id="year" onkeyup="calcular()">
+        <input type="button" onclick="calcular()" value="Calcular" >
+        <p id="resultado"></p>
+    </form>
+
+    <script>
+        function calcular(){
+            var year = document.getElementById("year").value;
+            
+            if (year % 4 == 2){
+                console.log("Se jugo.");
+                document.getElementById("resultado").innerHTML = "Se jugo.";
+
+            }
+            else {
+                console.log("No se jugo.");
+                document.getElementById("resultado").innerHTML = "No se jugo.";
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

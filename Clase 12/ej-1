@@ -1,0 +1,16 @@
+<script>
+    var paises = ["Argentina","Alemania","Brasil","Chile","Estados Unidos","Belgica"];
+    var pais = "Canada";
+    console.log("Pais insertar: "+pais);
+
+    if (paises.indexOf(pais)) {
+        paises.push(pais);
+        
+    }
+    else {
+        console.error("Error. El pais "+pais+" ya existe.");
+    }
+
+    console.log(paises);
+
+</script>

@@ -1,0 +1,19 @@
+<script>
+    var codigo = ["ABC12341"];
+    var codigos =  ["ABC12345","ABC12349","ABC12344"];
+    if(
+        (codigo.slice(0,3).tolocal() == "ABC")
+        && 
+        (codigo[codigo.length -1] != "$")
+        &&
+        (codigo.length >= 8)
+        &&
+        (codigos.indexOf(codigo) == -1))
+    {
+        console.log("Codigo valido.");
+    }
+    else {
+        console.error("Codigo invalido.");
+    }
+
+</script>

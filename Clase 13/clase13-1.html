@@ -1,0 +1,17 @@
+<script>
+ //Crear una función que me diga si el número que recibe como parámetro es positivo o no (sin usar formulario). Mostrar en console.log.
+    //Indicar ERROR si no es un número.
+    function mostrar(n){
+        if(typeof(n) == "number"){
+            if(n>0){
+                console.log(n + " es positivo")
+            }
+            else if(n == 0){
+                console.log(n + " es Cero")
+            }
+            else{console.log(n + " es negativo")}
+        }
+        else{console.log("ERROR! No es un múmero")}
+    }
+    mostrar(0);
+</script>

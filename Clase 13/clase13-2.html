@@ -1,0 +1,31 @@
+<script>
+
+      function promedio(a,b,c){
+        var numeros = [];
+        if(typeof(a) =="number"){
+            numeros.push(a);
+        }
+        if(typeof(b) =="number"){
+            numeros.push(b);
+        }
+        if(typeof(c) =="number"){
+            numeros.push(c);
+        }                
+        if(numeros.length == 0){
+            var resultado = 0;
+        }
+        else{
+            var acumula = 0;
+            for(i in numeros){
+                acumula += numeros[i]
+            }
+            var resultado = acumula / numeros.length;
+        }
+        
+
+        return resultado;
+    }
+    console.log(promedio(1,2,"3"))
+
+
+</script>

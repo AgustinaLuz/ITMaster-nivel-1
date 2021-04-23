@@ -1,0 +1,20 @@
+<script>
+    var url = "https://foo.com.ar"
+
+
+    if( 
+    (url.substring(0,7).toLocaleLowerCase() == "http//") || (url.substring(0,8).
+    toLocaleLowerCase() == "https//" ) 
+    &&
+    (url.indexOf(".") >-1 && url[url.length-1] != "." )
+    &&
+    url.indexOf("@") == -1)
+    {
+        console.log("Dominio válido.");
+    }
+    else {
+        console.error("Dominio inválido.");
+    }
+
+
+</script>

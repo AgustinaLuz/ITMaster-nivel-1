@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="totalProductos"></p>
+    <p id="totalPrecio"></p>
+</body>
+<script>
+    //Sin REACT. Dado un JSON con 5 productos y valores indicar cuántos productos hay y el precio total. Se puede recorrer con un for.
+    
+const productos = [{producto:"webcam", precio:25000},
+                    {producto:"TV 4k", precio:55000}, 
+                    {producto:"auriculares", precio:3000}, 
+                    {producto:"silla gamer", precio:30000}, 
+                    {producto:"pc", precio:50000}, 
+    ]
+    
+    var totalPrecio = 0;
+    for (let producto of productos){
+        totalPrecio = totalPrecio + producto.precio;    
+    }
+    document.getElementById("totalProductos").innerHTML = "La cantidad de productos es " + productos.length;
+    document.getElementById("totalPrecio").innerHTML = "el total de la compra es de $" + totalPrecio;
+</script>
+</html>

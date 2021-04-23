@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // Sin REACT. Dado un JSON de 5 personas con nombre, apellido y edad, mostrar todos los que tengan 65 o más años de edad.
+        const usuarios = [{nombre:"Dami",apellido:"De",edad: "43"},
+                        { nombre:"john",apellido:"Deacon",edad: "69"},
+                        { nombre:"Freddie",apellido:"Mercury",edad: "45"},
+                        { nombre:"Brian",apellido:"May",edad: "73"},
+                        { nombre:"Roger",apellido:"Taylor",edad: "71"},
+        ]
+        for (let usuario of usuarios) {
+            if (usuario.edad >= 65){
+                console.log(usuario.nombre);
+            }
+        }
+    </script>
+</body>
+</html>

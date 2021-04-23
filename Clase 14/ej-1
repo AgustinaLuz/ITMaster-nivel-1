@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 25px auto;
+            width: 50%;
+            border: 2px solid black;
+            padding: 10px;}
+        form *{
+        display: block;
+        margin: 5px auto;
+        text-align: center;
+        padding: 5px;
+        box-sizing: border-box;
+        }
+        form input[type="text"], form input[type="email"]{width: 60%;}
+        form input[type="button"]{width: 20%; margin-top: 20px;}
+        #mensaje{
+            text-align: center;
+            font-weight: bold;
+        }
+        </style>
+</head>
+<body>
+    <form action="">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" placeholder="Nombre">
+        <label for="mail">Email:</label>
+        <input id="mail" type="text" placeholder="Email Adress">
+        <input type="button" value="Validar" onclick="validar()">
+    </form>
+    <p id="mensaje"></p>
+
+    <script>
+        function validar () {
+            var nombre = document.getElementById("nombre").value;
+            var mail = document.getElementById("mail").value;
+
+            if( (isNaN(nombre)) && (nombre.length >= 3) && (mail.indexOf("@") > -1) && (mail.length >= 6) ){
+                document.getElementById("mensaje").innerHTML = "La validación fue exitosa";
+                document.getElementById("mensaje").style.color="lightgreen"
+            }
+            else {
+                document.getElementById("mensaje").innerHTML = "ERROR!"
+                document.getElementById("mensaje").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

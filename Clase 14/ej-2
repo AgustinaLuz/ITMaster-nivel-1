@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        form {
+            margin: 25px auto;
+            width: 40%;
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        label, input {
+            width: 100%;
+            display: block;
+            margin:5px auto;
+            box-sizing: border-box;
+        }
+        form input[ type="text"]{
+            width:50%;
+        }
+        form input[type="button"]{
+            width:30%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="f1" action="">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" placeholder="Email Address"><br>
+        <label for="como">Como nos conocio:</label>
+        <select name="" id="como">
+            <option value="como">opciones</option>
+            <option value="radio">Radio</option>
+            <option value="Amigo">Amigo</option>
+            <option value="internet">Internet</option>
+            
+        </select>
+        <input type="checkbox" name="" id="check">
+        <label for="aceptar">Aceptar</label>
+        <input type="button" value="Acepto" onclick="aceptar()">
+    </form>
+    <p id="mensaje"></p>
+
+    <script>
+        function aceptar () {
+
+            
+            var nombre = document.getElementById("nombre").value;
+            var como = document.getElementById("como").value;
+            var check = document.getElementById("check");
+
+            
+
+            if(check.checked  && nombre.length >= 4 && como != "como") {
+                document.getElementById("mensaje").innerHTML = "Acepto condiciones";
+                document.getElementById("mensaje").style.backgroundColor = "green";
+                document.getElementById("mensaje").style.color = "white";
+            }
+            else {
+                document.getElementById("mensaje").innerHTML = "Error";
+                document.getElementById("mensaje").style.backgroundColor = "red";
+                document.getElementById("mensaje").style.color = "white";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="actores"></ul>
+</body>
+<script>
+    //Sin REACT.  Del JSON de películas que vimos en clase mostrar solo los actores en una lista (ul li). Se puede con for of.
+    const peliculas = [
+            { pelicula: "Inception", director: "Christopher Nolan", actor: "Leonardo DiCaprio" },
+            { pelicula: "500 Days of Summer", director: "Marc Webb", actor: "Joseph Gordon-Levitt" },
+            { pelicula: "Dark Shadows", director: "Tim Burton", actor: "Johnny Depp" },		
+            ];
+    for (let pelicula of peliculas){
+        document.getElementById("actores").insertAdjacentHTML('beforeend', `<li>${pelicula.actor}</li>`);
+    }
+</script>
+</html>
